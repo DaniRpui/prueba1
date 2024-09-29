@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Página web</title>
+</head>
+<body>
+
+    <!-- Navegación principal -->
+    <div class="head">
+        <div class="logo">
+            <a href="#">Logo</a>
+        </div>
+        <nav class="navbar">
+            <a href="#inicio">Inicio</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+            <a href="#productos">Productos</a>
+            <a href="#precios">Precios</a>
+        </nav>
+    </div>
+
+    <!-- Sección Inicio -->
+    <header id="inicio" class="content header">
+        <h2 class="title">Inicio</h2>
+        <p>
+            1 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Accusamus, nobis odio officiis enim quibusdam sint eum atque necessitatibus 
+            distinctio iusto nulla itaque accusantium perferendis ducimus quaerat amet aliquid 
+            corrupti modi!
+        </p>
+        <div class="btn-home">
+            <a href="#" class="btn" id="toggleInicio">Saber más</a>
+            <a href="#" class="btn" id="toggleLess">Saber menos</a>
+        </div>
+        <div id="moreInfoInicio" class="more-info" style="display: none;">
+            <p>Esta es información adicional que se muestra al hacer clic en "Saber más"
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus,
+                 dicta unde perspiciatis quas corporis in labore dolor impedit eligendi?
+                  Aspernatur modi vero vitae facilis maiores ipsam fugiat veritatis cumque.
+                   Corporis..</p>
+        </div>
+    </header>
+
+    <!-- Sección Productos -->
+    <section id="productos" class="content sau">
+        <h2 class="title">Productos</h2>
+        <p>
+            2 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, ab! 
+            Exercitationem impedit fugiat inventore quasi recusandae architecto delectus earum fugit iure nulla quas id ipsa, 
+            aspernatur sunt quos nobis tempora?
+        </p>
+
+        <div class="box-container">
+            <div class="box">
+                <i class="fab fa-angular"></i>
+                <h3>Lorem</h3>
+                <p>Fugit iure nulla quas id ipsa, aspernatur sunt quos</p>
+            </div>
+
+            <div class="box">
+                <i class="fab fa-apple"></i>
+                <h3>Lorem</h3>
+                <p>Fugit iure nulla quas id ipsa, aspernatur sunt quos</p>
+            </div>
+
+            <div class="box">
+                <i class="fab fa-android"></i>
+                <h3>Lorem</h3>
+                <p>Fugit iure nulla quas id ipsa, aspernatur sunt quos</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Nosotros -->
+    <section id="nosotros" class="content about">
+        <h2 class="title">Nosotros</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Delectus provident modi aut id, eos culpa, ea adipisci earum 
+            asperiores voluptatibus voluptates aliquam magni rerum accusamus,
+            perferendis obcaecati cupiditate cum itaque.
+        </p>
+        <a href="#" class="btn" id="toggleNosotros">Saber más</a>
+        <div id="moreInfoNosotros" class="more-info" style="display: none;">
+            <p>Esta es información adicional sobre nosotros.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Assumenda reprehenderit doloribus voluptatibus autem iure 
+                dicta consequatur commodi! Consequatur esse libero similique, 
+                obcaecati numquam aspernatur atque dicta deleniti nostrum itaque autem.
+            </p>
+        </div>
+    </section>
+
+    <!-- Sección Precios -->
+    <section id="precios" class="content price"> 
+        <article class="contain">
+            <h2 class="title">Precios</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Delectus provident modi aut id, eos culpa, ea adipisci earum 
+                asperiores voluptatibus voluptates aliquam magni rerum accusamus,
+                perferendis obcaecati cupiditate cum itaque.
+            </p>
+            <a href="#" class="btn" id="togglePrecios">Saber Precio</a>
+            <div id="moreInfoPrecios" class="more-info" style="display: none;">
+                <p>Detalles sobre los precios de nuestros productos.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Facilis ratione commodi voluptas vel id eveniet, assumenda similique, 
+                    explicabo praesentium et officiis quas sint, ipsum rem itaque ut delectus 
+                    corporis. Aliquam.
+                </p>
+            </div>
+        </article>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="content contacto">
+        <h2 class="title">Contacto</h2>
+        <p>12345678</p>
+        <figure class="map">
+            <img src="img/mapa.png" height="220px" width="100%" alt="mapa">
+        </figure>
+    </section>
+
+    <script>
+        // Funciones para mostrar/ocultar información adicional
+        document.getElementById('toggleInicio').addEventListener('click', function(event) {
+            event.preventDefault();
+            var moreInfo = document.getElementById('moreInfoInicio');
+            moreInfo.style.display = moreInfo.style.display === 'none' ? 'block' : 'none';
+        });
+
+        document.getElementById('toggleLess').addEventListener('click', function(event) {
+            event.preventDefault();
+            var moreInfo = document.getElementById('moreInfoInicio');
+            moreInfo.style.display = 'none';
+        });
+
+        document.getElementById('toggleNosotros').addEventListener('click', function(event) {
+            event.preventDefault();
+            var moreInfo = document.getElementById('moreInfoNosotros');
+            moreInfo.style.display = moreInfo.style.display === 'none' ? 'block' : 'none';
+        });
+
+        document.getElementById('togglePrecios').addEventListener('click', function(event) {
+            event.preventDefault();
+            var moreInfo = document.getElementById('moreInfoPrecios');
+            moreInfo.style.display = moreInfo.style.display === 'none' ? 'block' : 'none';
+        });
+    </script>
+
+</body>
+</html>
+
